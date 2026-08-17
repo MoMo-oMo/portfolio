@@ -55,22 +55,6 @@
               >
             </span>
           </router-link>
-
-          <a
-            :href="cvUrl"
-            download
-            class="group relative px-8 py-4 bg-transparent border-2 border-[#a855f7] rounded-xl font-semibold text-lg overflow-hidden hover:scale-105 transition-all hover:bg-[#a855f7]/10 glow-button-outline"
-          >
-            <span
-              class="relative z-10 flex items-center gap-2 text-[#a855f7] group-hover:text-[#ec4899]"
-            >
-              Download CV
-              <span
-                class="inline-block transform group-hover:translate-x-1 transition-transform"
-                >↓</span
-              >
-            </span>
-          </a>
         </div>
       </div>
     </div>
@@ -79,8 +63,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-
-const cvUrl = `${import.meta.env.BASE_URL}Mohammed-Yaseen-Khan-CV.pdf`;
 
 const typedText = ref("");
 const subtitle = "Developer | Dreamer | Explorer of Code & Cosmos.";

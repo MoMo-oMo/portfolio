@@ -129,7 +129,7 @@ const steps = [
   {
     icon: RocketIcon,
     title: "Home",
-    text: "The landing page — a quick intro with one-click links to jump straight to my work, get in touch, or download my CV.",
+    text: "The landing page — a quick intro with one-click links to jump straight to my work or get in touch.",
   },
   {
     icon: PlanetIcon,
