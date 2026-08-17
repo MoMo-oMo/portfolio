@@ -1,25 +1,26 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHashHistory } from "vue-router";
+const Home = () => import("../views/Home.vue");
+const About = () => import("../views/About.vue");
+const Projects = () => import("../views/Projects.vue");
+const Contact = () => import("../views/Contact.vue");
+const Skills = () => import("../views/Skills.vue");
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+  { path: "/", name: "Home", component: Home },
+  { path: "/about", name: "About", component: About },
+  { path: "/projects", name: "Projects", component: Projects },
+  { path: "/contact", name: "Contact", component: Contact },
+  { path: "/skills", name: "Skills", component: Skills },
+  { path: "/:pathMatch(.*)*", redirect: "/" },
+];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  // Hash mode: no server-side rewrite needed, so direct links and refreshes
+  // to any route work on any static host (GitHub Pages included) without
+  // extra deploy config, regardless of whether this ends up at a domain
+  // root or a subpath.
+  history: createWebHashHistory(),
+  routes,
+});
 
-export default router
+export default router;

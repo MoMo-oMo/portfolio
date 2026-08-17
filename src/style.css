@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a855f7, #ec4899);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ec4899, #3b82f6);
+}
+
+/* Shared Component Classes */
+.page-container {
+  @apply min-h-screen px-4 md:px-12 lg:px-24 pt-20 pb-8 ml-0 md:ml-20 lg:ml-24;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl md:text-6xl font-bold font-orbitron bg-gradient-to-r from-[#a855f7] to-[#ec4899] bg-clip-text text-transparent;
+}
+
+.section-divider {
+  @apply w-24 md:w-32 h-1 bg-gradient-to-r from-[#a855f7] to-[#ec4899] rounded-full mt-4;
+}
+
+.glow-card {
+  @apply p-5 md:p-6 bg-gradient-to-br from-[#0b0014]/80 to-[#1a0033]/80 rounded-xl border border-[#a855f7]/20 hover:border-[#a855f7]/60 transition-all duration-300 md:hover:scale-105;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.1);
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), 0 0 60px rgba(168, 85, 247, 0.2);
+}
+
+.glow-button {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
