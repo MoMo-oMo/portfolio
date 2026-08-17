@@ -11,7 +11,7 @@
         <div class="grid md:grid-cols-2 gap-12 items-start">
           <div class="flex justify-center">
             <div class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500/30 glow-border-avatar">
-              <img src="/profile.jpg" alt="Mohammed Yaseen Khan" class="w-full h-full object-cover object-top" />
+              <img :src="profileImage" alt="Mohammed Yaseen Khan" class="w-full h-full object-cover object-top" />
             </div>
           </div>
 
@@ -128,6 +128,8 @@
 </template>
 
 <script setup>
+const profileImage = `${import.meta.env.BASE_URL}profile.jpg`;
+
 const colors = ['#1e1e2e', '#a855f7', '#ec4899', '#38bdf8', '#34d399', '#facc15', '#f97316', '#f87171'];
 
 const experience = [

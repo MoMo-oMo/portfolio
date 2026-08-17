@@ -57,7 +57,7 @@
           </router-link>
 
           <a
-            href="/Mohammed-Yaseen-Khan-CV.pdf"
+            :href="cvUrl"
             download
             class="group relative px-8 py-4 bg-transparent border-2 border-[#a855f7] rounded-xl font-semibold text-lg overflow-hidden hover:scale-105 transition-all hover:bg-[#a855f7]/10 glow-button-outline"
           >
@@ -79,6 +79,8 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+
+const cvUrl = `${import.meta.env.BASE_URL}Mohammed-Yaseen-Khan-CV.pdf`;
 
 const typedText = ref("");
 const subtitle = "Developer | Dreamer | Explorer of Code & Cosmos.";
