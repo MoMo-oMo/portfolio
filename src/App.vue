@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen overflow-hidden">
+  <div class="relative min-h-screen overflow-x-hidden">
     <!-- Animated Space Background -->
     <BackgroundStars />
 
@@ -45,13 +45,13 @@ import WelcomeTour from "./components/WelcomeTour.vue";
   transform: translateX(-30px) scale(0.95);
 }
 
-/* Optional — ensure background takes full space */
+/* BackgroundStars is fixed-positioned, so it sizes to the viewport on its
+   own — these don't need an explicit height, just no horizontal scroll. */
 html,
 body,
 #app {
   margin: 0;
   padding: 0;
-  height: 100%;
   overflow-x: hidden;
 }
 </style>
